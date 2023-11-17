@@ -18,11 +18,13 @@ const Dashboard = () => {
   const [nome, setNome] = useState(0);
 
   const porcentagemConversao = () => {
-
     const porcentagem = (qtdVendasConvertidas / quantidadeVendas) * 100;
+    
+    if (isNaN(porcentagem)) {
+      return 0;
+    }
 
-
-    return porcentagem;
+    return porcentagem.toFixed(2);
   };
 
 
@@ -58,6 +60,8 @@ const Dashboard = () => {
       }
     };
 
+    
+
     const clientesUltimos = async () => {
       try {
         let allClientes = [];
@@ -70,17 +74,20 @@ const Dashboard = () => {
             },
             params: {
               page: currentPage,
-              size: 10,  
+              size: 10,
             },
           });
     
-          const dataAtual = moment();
-          const limite30Dias = dataAtual.clone().subtract(30, 'days');
+          const clientesUltimos30Dias = response.data.content.filter(cliente => {
+            if (cliente.data) {
+              const [ano, mes, dia] = cliente.data.slice(0, 3); 
+              const clienteDate = moment(`${ano}-${mes}-${dia}`);
+              const limite30Dias = moment().subtract(30, 'days');
+              return clienteDate.isAfter(limite30Dias);
+            }
     
-          const clientesUltimos30Dias = response.data.content.filter(cliente =>
-            cliente.data &&
-            moment(new Date(...cliente.data)).isAfter(limite30Dias)
-          );
+            return false;
+          });
     
           allClientes = allClientes.concat(clientesUltimos30Dias);
     
