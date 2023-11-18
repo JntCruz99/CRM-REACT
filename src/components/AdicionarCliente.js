@@ -2,19 +2,17 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const AdicionarCliente = () => {
-    const [idCliente, setidCliente] = useState(0);
+    const [idCliente, setIdCliente] = useState(0);
 
     const adicionarCliente = async () => {
-
         const nomeCliente = document.getElementById('nome').value;
-        const telefoneCliente = document.getElementById('numeroTelefone1').value;
+        const telefoneCliente1 = document.getElementById('numeroTelefone1').value;
         const telefoneCliente2 = document.getElementById('numeroTelefone2').value;
         const plataformaCliente = document.getElementById('plataforma').value;
         const emailCliente = document.getElementById('email').value;
 
-
-        if (!nomeCliente || !telefoneCliente || !plataformaCliente || !emailCliente) {
-            alert('Por favor, preencha todos os campos obrigatorios.');
+        if (!nomeCliente || !telefoneCliente1 || !plataformaCliente || !emailCliente) {
+            alert('Por favor, preencha todos os campos obrigatórios.');
             return;
         }
 
@@ -22,7 +20,7 @@ const AdicionarCliente = () => {
             const token = localStorage.getItem('token');
             const response = await axios.post(`${process.env.REACT_APP_API_URL}/clientes`, {
                 nome: nomeCliente,
-                numeroTelefone1: telefoneCliente,
+                numeroTelefone1: telefoneCliente1,
                 numeroTelefone2: telefoneCliente2,
                 plataforma: plataformaCliente,
                 email: emailCliente,
@@ -31,16 +29,35 @@ const AdicionarCliente = () => {
                     Authorization: `Bearer ${token}`,
                 },
             });
-            setidCliente = response.data.id;
-
-
+            setIdCliente(response.data.id);
         } catch (error) {
-            console.error('Erro ao adicionar cliente:', error);
-
+            alert('Erro ao adicionar cliente:');
         }
     };
 
-    
+    const adicionarVenda = async () => {
+        const status = document.getElementById('status').value;
+        const valor = document.getElementById('valor').value;
+        const obs = document.getElementById('obs').value;
+        const curso = document.getElementById('curso').value;
+
+        try {
+            const token = localStorage.getItem('token');
+            await axios.post(`${process.env.REACT_APP_API_URL}/vendas/${idCliente}`, {
+                status: status,
+                valor: parseFloat(valor),
+                obs: obs,
+                curso: curso,
+            }, {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            });
+        } catch (error) {
+            alert('Erro ao adicionar venda');
+        }
+    };
+
 
     return (
         <div>
@@ -125,7 +142,7 @@ const AdicionarCliente = () => {
                                     <input type="number" step="0.10" class="form-control" id="valor" name="valor" required />
                                 </div>
                                 <div class="form-group">
-                                    <label for="curso">Status:</label>
+                                    <label for="curso">Curso:</label>
                                     <select class="form-control" id="curso" name="curso" required>
                                         <option value="Superior_Enfermagem">Superior em Enfermagem</option>
                                         <option value="Pos_graduacao">Pós-graduacao</option>
@@ -138,13 +155,13 @@ const AdicionarCliente = () => {
                                 </div>
                                 <div class="form-group">
                                     <label for="obs">Observação:</label>
-                                    <input type="obs" class="form-control" id="obs" name="obs" required />
+                                    <input type="text" class="form-control" id="obs" name="obs" required />
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
                             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                            <button class="btn btn-success"  data-dismiss="modal">Adicionar</button>
+                            <button class="btn btn-success" onClick={adicionarVenda}  data-dismiss="modal">Adicionar</button>
                         </div>
                     </div>
                 </div>
