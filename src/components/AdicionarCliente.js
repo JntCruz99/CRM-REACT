@@ -3,6 +3,7 @@ import axios from 'axios';
 
 const AdicionarCliente = () => {
     const [idCliente, setIdCliente] = useState(0);
+    
 
     const adicionarCliente = async () => {
         const nomeCliente = document.getElementById('nome').value;
