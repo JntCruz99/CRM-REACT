@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './routes/Login';
 import Dashboard from './routes/Dashboard';
+import Cliente from './routes/Cliente';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/cliente/:id" element={<Cliente/>} />
       </Routes>
     </BrowserRouter>
   );

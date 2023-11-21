@@ -53,7 +53,7 @@ const Main = ({ children }) => {
         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style={{ backgroundColor: 'green', color: 'white' }}>
 
 
-          <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+          <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/dashboard">
 
             <div class="sidebar-brand-text mx-3"><img src={logoImg} alt="Logo FESVIP" style={{ width: '200px', height: 'auto', marginTop: '15px', marginBottom: '15px' }} /></div>
           </a>
