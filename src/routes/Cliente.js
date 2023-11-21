@@ -254,9 +254,11 @@ const Cliente = () => {
                                                     >
                                                         <i className="fas fa-edit"></i>
                                                     </button>
+
                                                 </div>
 
                                                 <div className={`card-body text-${getStatusColor(venda.status)}`}>
+                                                    <span>{venda.data[2]}/{venda.data[1]}/{venda.data[0]}</span>
                                                     <h5 className="card-title">{venda.curso}</h5>
                                                     <p className="card-text text-dark ">Valor: R${venda.valor}</p>
                                                 </div>
@@ -406,7 +408,7 @@ const Cliente = () => {
                         </div>
                         <div class="modal-footer">
                             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                            <button class="btn btn-success"  onClick={() => { adicionarVenda(); window.location.reload(); }}  data-dismiss="modal">Adicionar</button>
+                            <button class="btn btn-success" onClick={() => { adicionarVenda(); window.location.reload(); }} data-dismiss="modal">Adicionar</button>
                         </div>
                     </div>
                 </div>

@@ -62,7 +62,7 @@ const Main = ({ children }) => {
           <hr class="sidebar-divider my-0" />
 
 
-          <li class="nav-item active">
+          <li class="nav-item ">
             <a class="nav-link" href="/dashboard">
               <i class="fas fa-fw fa-tachometer-alt"></i>
               <span>Dashboard</span></a>
@@ -85,7 +85,7 @@ const Main = ({ children }) => {
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
               <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">vendas:</h6>
-                <a class="collapse-item" href="buttons.html">Geral</a>
+                <a class="collapse-item" href="/vendas">Geral</a>
                 <a class="collapse-item" href="cards.html">Minhas vendas</a>
               </div>
             </div>

@@ -66,9 +66,9 @@ const BarraPesquisar = () => {
                 </div>
             </form>
 
-            {/* Exibir resultados da pesquisa */}
+
             {searchResults.length > 0 && (
-                <div className="search-results position-absolute border rounded p-2 mt-1" style={{ zIndex: 100, backgroundColor: 'white', cursor: 'pointer' }}>
+                <div className="search-results position-absolute border rounded p-2 mt-1" style={{ zIndex: 100, backgroundColor: 'white', cursor: 'pointer', width: '360px', marginLeft: '16px' }}>
                     <ul className="list-unstyled m-0">
                         {searchResults.map((result, index) => (
                             <li
