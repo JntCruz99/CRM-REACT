@@ -77,35 +77,11 @@ const Main = ({ children }) => {
           </div>
 
           <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-              aria-expanded="true" aria-controls="collapseTwo">
-              <i class="fas fa-fw fa-money-bill"></i>
-              <span>Vendas</span>
-            </a>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-              <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">vendas:</h6>
-                <a class="collapse-item" href="/vendas">Geral</a>
-                <a class="collapse-item" href="cards.html">Minhas vendas</a>
-              </div>
-            </div>
-          </li>
-
-
-          <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-              aria-expanded="true" aria-controls="collapseUtilities">
+            <a class="nav-link" href="/vendas">
               <i class="fas fa-fw fa-user"></i>
-              <span>Clientes</span>
-            </a>
-            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-              data-parent="#accordionSidebar">
-              <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="utilities-color.html">Geral</a>
-                <a class="collapse-item" href="utilities-border.html">Vazio</a>
-              </div>
-            </div>
+              <span>Clientes</span></a>
           </li>
+
 
 
           <hr class="sidebar-divider" />
@@ -117,14 +93,14 @@ const Main = ({ children }) => {
 
 
           <li class="nav-item">
-            <a class="nav-link" href="charts.html">
+            <a class="nav-link" href="#">
               <i class="fas fa-fw fa-chart-area"></i>
               <span>Graficos</span></a>
           </li>
 
 
           <li class="nav-item">
-            <a class="nav-link" href="tables.html">
+            <a class="nav-link" href="#">
               <i class="fas fa-fw fa-table"></i>
               <span>Tabelas</span></a>
           </li>
