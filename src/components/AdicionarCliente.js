@@ -62,7 +62,7 @@ const AdicionarCliente = () => {
 
     return (
         <div>
-            <a href="#" 
+            <a 
             data-target="#adicionarClienteModal" 
             data-toggle="modal"
              class="d-none d-sm-inline-block btn btn-sm btn shadow-sm" style={{ backgroundColor: 'green', color: 'white' }}><i

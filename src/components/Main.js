@@ -93,14 +93,14 @@ const Main = ({ children }) => {
 
 
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" >
               <i class="fas fa-fw fa-chart-area"></i>
               <span>Graficos</span></a>
           </li>
 
 
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" >
               <i class="fas fa-fw fa-table"></i>
               <span>Tabelas</span></a>
           </li>
@@ -137,7 +137,7 @@ const Main = ({ children }) => {
 
 
                 <li class="nav-item dropdown no-arrow d-sm-none">
-                  <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                  <a class="nav-link dropdown-toggle" id="searchDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-search fa-fw"></i>
                   </a>
@@ -160,7 +160,7 @@ const Main = ({ children }) => {
                 </li>
 
                 <li class="nav-item dropdown no-arrow mx-1">
-                  <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                  <a class="nav-link dropdown-toggle" id="alertsDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-bell fa-fw"></i>
 
@@ -172,7 +172,7 @@ const Main = ({ children }) => {
                     <h6 class="dropdown-header " style={{ backgroundColor: 'green', border: 'green' }}>
                       Notificações
                     </h6>
-                    <a class="dropdown-item d-flex align-items-center" href="#">
+                    <a class="dropdown-item d-flex align-items-center" >
                       <div class="mr-3">
                         <div class="icon-circle bg-primary">
                           <i class="fas fa-file-alt text-white"></i>
@@ -184,13 +184,13 @@ const Main = ({ children }) => {
                       </div>
                     </a>
 
-                    <a class="dropdown-item text-center small text-gray-500" href="#">Veja mais!</a>
+                    <a class="dropdown-item text-center small text-gray-500">Veja mais!</a>
                   </div>
                 </li>
 
 
                 <li class="nav-item dropdown no-arrow mx-1">
-                  <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                  <a class="nav-link dropdown-toggle" id="messagesDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-envelope fa-fw"></i>
 
@@ -203,7 +203,7 @@ const Main = ({ children }) => {
                       Menssagens
                     </h6>
 
-                    <a class="dropdown-item d-flex align-items-center" href="#">
+                    <a class="dropdown-item d-flex align-items-center" >
                       <div class="dropdown-list-image mr-3">
                         <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
                           alt="..." />
@@ -214,7 +214,7 @@ const Main = ({ children }) => {
                         <div class="small text-gray-500">Doguinho · 2d</div>
                       </div>
                     </a>
-                    <a class="dropdown-item text-center small text-gray-500" href="#">Ler mais mensagens</a>
+                    <a class="dropdown-item text-center small text-gray-500" >Ler mais mensagens</a>
                   </div>
                 </li>
 
@@ -222,7 +222,7 @@ const Main = ({ children }) => {
 
 
                 <li class="nav-item dropdown no-arrow">
-                  <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                  <a class="nav-link dropdown-toggle"  id="userDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="mr-2 d-none d-lg-inline text-gray-600 small">{nome}</span>
                     <img class="img-profile rounded-circle"
@@ -231,17 +231,17 @@ const Main = ({ children }) => {
 
                   <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                     aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" >
                       <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                       Perfil
                     </a>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item">
                       <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                       Configurações
                     </a>
 
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                    <a class="dropdown-item"  data-toggle="modal" data-target="#logoutModal">
                       <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400" ></i>
                       Sair
                     </a>

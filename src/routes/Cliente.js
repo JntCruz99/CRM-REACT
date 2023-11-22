@@ -228,7 +228,7 @@ const Cliente = () => {
                             <div className="col-lg-6">
                                 <div className="card position-relative">
                                     <div className="card-header py-3">
-                                        <h6 className="m-0 font-weight-bold text-success">VENDAS: <a href="#"
+                                        <h6 className="m-0 font-weight-bold text-success">VENDAS: <a
                                             data-target="#novavenda"
                                             data-toggle="modal"
                                             class="d-none d-sm-inline-block btn btn-sm btn shadow-sm " style={{ backgroundColor: 'green', color: 'white', marginLeft: '350px' }}><i

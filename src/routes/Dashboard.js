@@ -16,7 +16,7 @@ const Dashboard = () => {
   const [qtdVendasConvertidas, setQtdVendasConvertidas] = useState(0);
   const [qtdVendasUser, setQtdVendasUser] = useState(0);
   const [cliente, setCliente] = useState(0);
-  const [nome, setNome] = useState(0);
+
 
   const porcentagemConversao = () => {
     const porcentagem = (qtdVendasConvertidas / quantidadeVendas) * 100;
