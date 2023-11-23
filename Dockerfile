@@ -20,7 +20,7 @@ COPY . .
 RUN npm run build
 
 # Exponha a porta 80 para o mundo exterior
-EXPOSE 30
+EXPOSE 3000
 
 # Comando para iniciar o aplicativo quando o contêiner for iniciado
 CMD ["npm", "start"]
