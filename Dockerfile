@@ -1,5 +1,5 @@
 # Use a imagem oficial do Node.js
-FROM node:alpine
+FROM node:14-alpine
 
 # Configure o diretório de trabalho dentro do contêiner
 WORKDIR /app
@@ -15,6 +15,8 @@ RUN npm install
 
 # Copie os arquivos do projeto para o diretório de trabalho
 COPY . .
+
+RUN chmod -R 777 /app
 
 # Construa o aplicativo React
 RUN npm run build
