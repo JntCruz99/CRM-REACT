@@ -129,8 +129,6 @@ const Dashboard = () => {
         },
       })
         .then((response) => {
-          setNome(response.data.nome);
-          // Chama fetchData aqui após verificar o token, se necessário
           fetchData();
           vendasUser();
           conversao();
